@@ -54,17 +54,17 @@ that 1 is neither even nor odd.
 
 # SEE ALSO
 
-isfourtytwo(2d),
-iszero(2d),
-is\_number\_of\_beast(2d),
-divisibleby(2d),
-only\_divisible\_by\_itself\_and\_one(2d),
-readable\_math(2d),
-may\_resemble\_phone\_number(2d),
-may\_resemble\_SSN(2d),
-may\_resemble\_CCN(2d),
-may\_resemble\_luggage\_combination(2d),
-politically\_sensitive\_numbers(2d)
+isfourtytwo(3d),
+iszero(3d),
+is\_number\_of\_beast(3d),
+divisibleby(3d),
+only\_divisible\_by\_itself\_and\_one(3d),
+readable\_math(3d),
+may\_resemble\_phone\_number(3d),
+may\_resemble\_SSN(3d),
+may\_resemble\_CCN(3d),
+may\_resemble\_luggage\_combination(3d),
+politically\_sensitive\_numbers(3d)
 
 # RATIONALE
 
