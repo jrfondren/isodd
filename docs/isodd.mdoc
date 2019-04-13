@@ -1,0 +1,69 @@
+.Dd April 13, 2019
+.Dt isodd 3d
+.Os D
+.Sh NAME
+.Nm isodd
+.Nd Parity tests with low cognitive load
+.Sh SYNOPSIS
+.Pp
+\fBimport isodd : isOdd, isEven;\fR
+.Pp
+\fBbool isOdd(T)(T \fIn\fB);\fR
+.Pp
+\fBbool isEven(T)(T \fIn\fB);\fR
+.Sh DESCRIPTION
+\fBisOdd\fR() returns true when given an integral type or a type
+with a compatible overloading of \fBopBinary!("&")\fR.
+\fBisEven\fR() returns false in all cases where \fBisOdd\fR() would
+return true.
+.Sh RETURN VALUE
+These functions return true or false.
+.Sh CONFORMING TO
+The mathematical property of parity.
+.Sh BUGS
+.Bl -item -compact
+.It
+These functions cannot be applied to floating-point numbers.
+.It
+These functions have not been tested against any
+indefinite-precision number libraries.
+.It
+These functions classify 1 as odd, violating the ancient Greek understanding
+that 1 is neither even nor odd.
+.El
+.Sh EXAMPLE
+.Bd -literal
+#! /usr/bin/env rdmd
+import std.stdio, std.conv, isodd;
+import core.stdc.stdlib : exit;
+
+void main(string[] args) {
+    void usage() { stderr.writefln("usage: %s <number>", args[0]); exit(1); }
+
+    if (args.length != 2) usage();
+    try {
+        writeln(isOdd(to!int(args[1])));
+    } catch (std.conv.ConvException e) {
+        usage();
+    }
+}
+.Ed
+.Sh SEE ALSO
+.Xr isfourtytwo 2d ,
+.Xr iszero 2d ,
+.Xr is_number_of_beast 2d ,
+.Xr divisibleby 2d ,
+.Xr only_divisible_by_itself_and_one 2d ,
+.Xr readable_math 2d ,
+.Xr may_resemble_phone_number 2d ,
+.Xr may_resemble_SSN 2d ,
+.Xr may_resemble_CCN 2d ,
+.Xr may_resemble_luggage_combination 2d ,
+.Xr politically_sensitive_numbers 2d
+.Sh RATIONALE
+\%https://forum.dlang.org/thread/sudscchdjotuzmhqcntq@forum.dlang.org
+.Sh FUTURE DIRECTIONS
+None.
+.Sh COLOPHON
+This page is part of the 0.1.0 release of the \fUisodd\fR DUB package.
+This package can be found at \%https://code.dlang.org/packages/isodd/.

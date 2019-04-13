@@ -1,0 +1,13 @@
+.dub
+docs.json
+__dummy.html
+isodd.so
+isodd.dylib
+isodd.dll
+isodd.a
+isodd.lib
+isodd-test-*
+*.exe
+*.o
+*.obj
+*.lst
