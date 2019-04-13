@@ -14,7 +14,7 @@ isodd(3d) - 3d
 
 # DESCRIPTION
 
-**isOdd**() returns true when given an integral type or a type
+**isOdd**() returns true when given an even integral type or a type
 with a compatible overloading of **opBinary!("&")**.
 **isEven**() returns false in all cases where **isOdd**() would
 return true.
