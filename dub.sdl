@@ -1,7 +1,6 @@
 name "isodd"
 description "Parity tests with low cognitive load"
 authors "Julian Fondren"
-version "0.1.0"
 copyright "Copyright © 2019, Julian Fondren"
 license "MIT"
 configuration "library" {
